@@ -1,0 +1,30 @@
+This document explains the Proctocal for command and response
+bewtween linux box and raspberry pi
+
+The source of message is from Linux Box
+
+Below are types of request and corresponding response
+
+
+Request-1
+{"MSG_TYPE":"START_RTSP_SERVER","ID":"1"}
+{"MSG_TYPE":"START_RTSP_SERVER", "STATUS":"SUCCESS" , "URL":"rtsp://192.168.1.2/rpi1"}
+{"MSG_TYPE":"START_RTSP_SERVER", "STATUS":"FAILED"} 
+
+
+Request-2
+{"MSG_TYPE":"START_RTSP_CLIENT", "URL":"rtsp://192.168.1.2/rpi1"}
+{"MSG_TYPE":"START_RTSP_CLIENT", "STATUS":"SUCCESS" }
+{"MSG_TYPE":"START_RTSP_CLIENT", "STATUS":"FAILED"} 
+
+Request-3
+{"MSG_TYPE":"STOP_RTSP_CLIENT"}
+{"MSG_TYPE":"STOP_RTSP_CLIENT", "STATUS":"SUCCESS" }
+{"MSG_TYPE":"STOP_RTSP_CLIENT", "STATUS":"FAILED"} 
+
+Request-4
+{"MSG_TYPE":"STOP_RTSP_SERVER"}
+{"MSG_TYPE":"STOP_RTSP_SERVER", "STATUS":"SUCCESS" }
+{"MSG_TYPE":"STOP_RTSP_SERVER", "STATUS":"FAILED"} 
+
+
